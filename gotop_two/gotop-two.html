@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gotop two</title>
+		<link rel="stylesheet" href="./sass/style.css" />
+	</head>
+	<body>
+		<header>Header</header>
+
+		<main>Contenido</main>
+
+		<!-- 
+            section_footer: se define con la finalidad de manejar
+            los espaciados o margenes entre la sesion y el body.
+        -->
+		<footer class="section_footer">
+			<!-- 
+                container_name: es quien contiene todos los elementos 
+				por lo general es a esta que damos width para manejar 
+				el responsive 
+            -->
+			<div class="container_footer">
+				<!--  
+					parrafo: por lo general contiene la parte del copyright.
+				-->
+				<p class="copy_right" id="copy-right"></p>
+
+				<!-- 
+					box-gotop: es el contenedor donde implementamos el 
+					icono caracteristico del la flecha arriba
+				-->
+				<div class="box_gotop">
+					<svg
+						id="arrow-up"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"
+						></path>
+					</svg>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

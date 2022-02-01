@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #45898b;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 260px;
+}
+
+main {
+  background-color: #6ba2e0;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 360px;
+}
+
+/*
+    seccion_name: nos sirve para implementar margenes y espaciados 
+    con el fin de separar el contenedor del body
+*/
+.section_footer {
+  background-color: #ccc;
+  padding: 50px 0;
+  /*
+        container_name: es quien contiene todos los elementos por lo
+		general es a esta que damos width para manejar el responsive
+    */
+}
+
+.section_footer .container_footer {
+  margin: 0 auto;
+  /*
+            query 769px <-- : definimos un width para esta medida
+		*/
+  /*
+            query 770px --> : definimos un width para esta medida
+		*/
+  /*
+			parrafo copyright
+		*/
+  /*
+			box_gotop: simplemente centramos el icono con la 
+			propiedad text-align
+		*/
+}
+
+@media (max-width: 769px) {
+  .section_footer .container_footer {
+    width: 90%;
+  }
+}
+
+@media (min-width: 770px) {
+  .section_footer .container_footer {
+    width: 80%;
+  }
+}
+
+.section_footer .container_footer .copy_right {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.section_footer .container_footer .box_gotop {
+  text-align: center;
+  height: 50px;
+  /*
+				svg: resaltemos que el icono debe tener su 
+				width y height de igual medida para que el icono
+				sea redondo
+			*/
+}
+
+.section_footer .container_footer .box_gotop svg {
+  background-color: darkorchid;
+  fill: #fff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.section_footer .container_footer .box_gotop svg:hover {
+  background-color: dodgerblue;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+$heightGotop: 50px;
+
+header {
+	background-color: rgb(69, 137, 139);
+	color: white;
+	text-align: center;
+	font-size: 1.3rem;
+	height: 260px;
+}
+
+main {
+	background-color: rgb(107, 162, 224);
+	color: white;
+	text-align: center;
+	font-size: 1.3rem;
+	height: 360px;
+}
+
+/*
+    seccion_name: nos sirve para implementar margenes y espaciados 
+    con el fin de separar el contenedor del body
+*/
+.section_footer {
+	background-color: #ccc;
+	padding: 50px 0;
+
+	/*
+        container_name: es quien contiene todos los elementos por lo
+		general es a esta que damos width para manejar el responsive
+    */
+	.container_footer {
+		margin: 0 auto;
+
+		/*
+            query 769px <-- : definimos un width para esta medida
+		*/
+		@media (max-width: 769px) {
+			width: 90%;
+		}
+
+		/*
+            query 770px --> : definimos un width para esta medida
+		*/
+		@media (min-width: 770px) {
+			width: 80%;
+		}
+
+		/*
+			box_gotop: con relative y sus propiedades bottom
+			y z-index le damos posicion a esta caja
+		*/
+		.box_gotop {
+			text-align: center;
+			position: relative;
+			bottom: 75px;
+			z-index: 99;
+			height: $heightGotop;
+
+			/*
+				svg: resaltemos que el icono debe tener su 
+				width y height de igual medida para que el icono
+				sea redondo
+			*/
+			svg {
+				background-color: salmon;
+				fill: #fff;
+				border-radius: 100%;
+				width: 50px;
+				height: $heightGotop;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: dodgerblue;
+				}
+			}
+		}
+
+		/*
+			parrafo copyright
+		*/
+		.copy_right {
+			text-align: center;
+			padding-top: 50px;
+		}
+	}
+}
