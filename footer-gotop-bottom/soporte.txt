@@ -1,0 +1,27 @@
+tenemos una carpeta llamada languajes en las que definimos
+2 archivos con extension .json. uno para el idioma español
+y otro para el idioma ingles. Estos los implementamos
+para hacer el cambio de idioma del sitio web
+
+dentro de estos creamos un objeto JSON la cual recibe la
+siguiente estructura que debe ser igual para todos los archivos
+
+{
+    "nameSection": {
+        "valueSection": ""
+    }
+}
+
+"nameSection": este parametro lo recibe el atributo data-section definido
+en un elemento html
+
+"valueSection": este parametro lo recibe el atributo data-value definido
+en un elemento html
+
+EJEMPLO...................
+
+<h6 data-section="nameSection" data-value="valueSection">Personas</h6>
+
+de esta manera cuando se selecciona el idioma una funcion definida en 
+javascript busca por medio de los atributos definidos en los elementos
+el archivo json correspondiente para realizar el cambio

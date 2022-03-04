@@ -1,0 +1,192 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header, main {
+	background-color: rgb(69, 137, 139);
+	color: white;
+	text-align: center;
+	font-size: 1.3rem;
+	height: 260px;
+}
+
+main {
+	background-color: gold;
+}
+
+/*
+	section_footer: contenedor en el cual implementamos
+	margin o padding si deseamos separar esta seccion
+	de otra
+*/
+.section_footer {
+	background-color: #445268;
+	padding: 50px 0;
+
+	/*
+		container_footer: contenedor en el cual definimos
+		width para manejar el responsive
+	*/
+	.container_footer {
+		margin: 0 auto;
+		// background-color: cadetblue;
+
+		/*
+            query 769px <=== : definimos un width para esta medida
+		*/
+		@media (max-width: 769px) {
+			width: 90%;
+		}
+
+		/*
+            query 770px ===> : definimos un width para esta medida
+		*/
+		@media (min-width: 770px) {
+			width: 80%;
+		}
+
+		/*
+			content_flexbox
+		*/
+		.content_flexbox {
+
+			/*
+				box_gotop: con relative y sus propiedades bottom
+				y z-index para posicionar esta caja, luego hacemos
+				uso de flexbox y sus propiedades justify-content
+				y align-items para centrar vertical y horizontalmente
+				el icono. finalmente hacemos uso de width y height
+				para darle tamaño a la caja que finalizamos centramos 
+				con la propiedad margin 
+			*/
+			.box_gotop {
+				position: relative;
+				bottom: 80px;
+				z-index: 99;
+				display: flex;
+				width: 60px;
+				justify-content: center;
+				height: 60px;
+				align-items: center;
+				border-radius: 100%;
+				background-color: #445268;
+				margin: 0 auto;
+				box-shadow: 0 5px 12px 0 rgba(0,0,0, .3);
+				cursor: pointer;
+
+				/*
+					tag-svg: resaltemos que si le damos width y height al 
+					contenedor podemos manipular el tamaño del icono 
+				*/
+				svg {
+					fill: #fff;
+					width: 32px;
+					height: 32px;
+					cursor: pointer;
+				}
+			}
+
+			/*
+				content_search
+			*/
+			.content_search {
+				text-align: center;
+
+				/*
+					tag-h2
+				*/
+				h2 {
+					color: #fff;
+					font-size: 1.6rem;
+					letter-spacing: 1.1px;
+				}
+
+				/*
+					tag_form
+				*/
+				form {
+					margin-top: 16px;
+
+					/*
+						tag_input
+					*/
+					input {
+						outline: none;
+						border: 1px solid #fff;
+						height: 35px;
+						margin: 0 2px;
+					}
+
+					/*
+						seleccionamos el input de tipo texto
+					*/
+					input[type="text"] {
+						width: 220px;
+						padding: 0 8px;
+					}
+
+					/*
+						seleccionamos el input de tipo submit
+					*/
+					input[type="submit"] {
+						color: #333;
+						width: 120px;
+						cursor: pointer;
+
+						/*
+							query 391px <=== : definimos un margen superiro 
+							para esta medida
+						*/
+						@media (max-width: 391px) {
+							margin-top: 22px;
+						}
+					}
+				}
+			}
+
+			/*
+				content_links
+			*/
+			.content_links {
+				text-align: center;
+				margin: 50px 0;
+
+				/*
+					tag-p
+				*/
+				p {
+					color: #fff;
+					line-height: 1.6;
+					
+					/*
+						tag-a
+					*/
+					a {
+						text-decoration: none;
+						color: #fff;
+						
+						/*
+							cuando hacemos :hover sobre los enlaces
+							cambiamos su color y añadimos una linea
+							en la parte inferior del texto
+						*/
+						&:hover {
+							color: olivedrab;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			/*
+				box_copy_right
+			*/
+			.box_copy_right {
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Footer gotop top</title>
+		<link rel="stylesheet" href="./sass/style.css" />
+	</head>
+	<body>
+		<header>Header</header>
+
+		<main>Contenido</main>
+
+		<!--  
+			section_footer: contenedor de la seccion
+		-->
+		<footer class="section_footer">
+			<!--  
+				container_footer: contenedor definido para
+				manejar el responsive de la seccion
+			-->
+			<div class="container_footer">
+
+				<!--  
+					content_flexbox: contenedor definido para implementar
+					flexbox o grid en la seccion
+				-->
+				<div class="content_flexbox">
+					<!-- 
+						box-gotop: contenedor de una tag-svg, le definimos
+						un ID para implementar este elemento en javascript
+					-->
+					<div class="box_gotop" id="go-top">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"
+							>
+							</path>
+						</svg>
+					</div>
+
+					<!--  
+						content_search: contenedor de 1 tag-h2 y 1 tag-form
+					-->
+					<section class="content_search">
+						<!--  
+							tag-h2: implementada para definir el titulo
+						-->
+						<h2>titulo para la busqueda</h2>
+	
+						<!--  
+							tag-form: contenedor de 2 tag-input
+						-->
+						<form>
+							<!--  
+								tag-input: type text
+							-->
+							<input class="text" type="text" name="keyword" placeholder="Input keywords">
+							<!--  
+								tag-input: type submit
+							-->
+							<input class="submit" type="submit" value="Subscribe">
+						</form>
+					</section>
+		
+					<!--  
+						content_links: contenedor de 2 tags-p
+					-->
+					<div class="content_links">
+						<!--  
+							content_links: contenedor de 9 tags-a
+						-->
+						<p>
+							<!--  
+								tag-a: definido para los enlaces
+							-->
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> |
+							<a href="#">Link</a> 
+						</p>
+						
+						<!--  
+							content_links: contenedor de 14 tags-a
+						-->
+						<p>
+							<!--  
+								tag-a: definido para los enlaces
+							-->
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> -
+							<a href="#">Enlaces</a> 
+						</p>
+					</div>
+
+					<!--  
+						tag-p: tiene un ID para implementar este elemento 
+						en javascript
+					-->
+					<p class="box_copy_right" id="copy-right"></p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

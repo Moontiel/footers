@@ -1,0 +1,293 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header, main {
+  background-color: #45898b;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 260px;
+}
+
+main {
+  background-color: #6ba202;
+}
+
+/*
+	tag-h6: titulo que pertence a las secciones
+	de column_footer_number
+*/
+h6 {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/*
+	tag-ul: menu de navegacion que pertence a 
+	las secciones de column_footer_number
+*/
+ul {
+  /*
+  	tag-li
+  */
+}
+ul li {
+  list-style: none;
+  margin-top: 10px;
+  /*
+  	tag-a
+  */
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  /*
+  	cuando hacemos :hover sobre los enlaces
+  	cambiamos su color
+  */
+}
+ul li a:hover {
+  color: #ccc;
+}
+
+/*
+	section_footer: contenedor en el cual implementamos
+	margin o padding si deseamos separar esta seccion
+	de otra
+*/
+.section_footer {
+  background-color: #2c2a29;
+  padding: 50px 0;
+  /*
+  	container_footer: contenedor en el cual definimos
+  	width para manejar el responsive
+  */
+}
+.section_footer .container_footer {
+  margin: 0 auto;
+  /*
+  	@query 769px <== : definimos un width en 
+  	esta medida para container_footer
+  */
+  /*
+  	@query 700px ==> : definimos un width en 
+  	esta medida para container_footer
+  */
+  /*
+  	flexbox_footer
+  */
+  /*
+  	box_copy_right
+  */
+  /*
+  	footer_flags: definimos flexbox y sus propiedades
+  	justify-content y align-items para centrar de manera
+  	horizontal y vertical los elementos que este 
+  	contiene
+  */
+  /*
+  	box_gotop: definimos flexbox y sus propiedades justify-content
+  	y align-items para centrar vertical y horizontalmente el
+  	icono finalmente margin: 0 auto para centrar el contenedor
+  */
+}
+@media (max-width: 769px) {
+  .section_footer .container_footer {
+    width: 90%;
+  }
+}
+@media (min-width: 770px) {
+  .section_footer .container_footer {
+    width: 80%;
+  }
+}
+.section_footer .container_footer .flexbox_footer {
+  /*
+  	@query 900px ==> : definimos flexbox y sus propiedades
+  	flex-wrap:: wrap que reubica los elementos cuando estos 
+  	sobrepasan el ancho de su contenedor padre, finalmente
+  	space-between: separa los elementos entre si
+  */
+  /*
+  	footer_columna_one
+  */
+  /*
+  	content_columna_two
+  */
+  /*
+  	content_columna_three
+  */
+  /*
+  	content_columna_four
+  */
+}
+@media (min-width: 700px) {
+  .section_footer .container_footer .flexbox_footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.section_footer .container_footer .flexbox_footer .footer_column_two {
+  /*
+  	@query 699px <== : definimos un margen en la 
+  	parte superior para esta medida
+  */
+}
+@media (max-width: 699px) {
+  .section_footer .container_footer .flexbox_footer .footer_column_two {
+    margin-top: 20px;
+  }
+}
+.section_footer .container_footer .flexbox_footer .footer_column_three {
+  /*
+  	@query 956px <== : definimos un margen en la 
+  	parte superior para esta medida
+  */
+  /*
+  	box_info_three
+  */
+}
+@media (max-width: 956px) {
+  .section_footer .container_footer .flexbox_footer .footer_column_three {
+    margin-top: 20px;
+  }
+}
+.section_footer .container_footer .flexbox_footer .footer_column_three .box_info_three {
+  /*
+  	seleccionamos la segunda caja con clase
+  	box_info_three y le definimos un margin-top
+                 */
+}
+.section_footer .container_footer .flexbox_footer .footer_column_three .box_info_three:nth-child(2) {
+  margin-top: 20px;
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four {
+  /*
+  	@query 956px <== : definimos un margen en la 
+  	parte superior para esta medida
+  */
+  /*
+  	tag-a
+  */
+  /*
+  	box_socials_media
+  */
+}
+@media (max-width: 956px) {
+  .section_footer .container_footer .flexbox_footer .footer_column_four {
+    margin-top: 20px;
+  }
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four a {
+  text-decoration: none;
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four .box_socials_media {
+  margin-top: 20px;
+  /*
+  	tag-a
+  */
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four .box_socials_media a {
+  text-decoration: none;
+  /*
+  	tag-svg
+  */
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four .box_socials_media a svg {
+  fill: #878787;
+  width: 32px;
+  height: 32px;
+  margin: 5px 10px 0 -10px;
+  /*
+  	cuando hacemos :hover sobre los iconos
+  	cambiamos el color de los mismos
+  */
+}
+.section_footer .container_footer .flexbox_footer .footer_column_four .box_socials_media a svg:hover {
+  fill: #ff671b;
+}
+.section_footer .container_footer .box_copy_right {
+  text-align: center;
+  color: #77777a;
+  margin: 30px 0;
+}
+.section_footer .container_footer .footer_flags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  /*
+  	espanish_flag y english_flag: es importante definir
+  	un width y height para ajustar el tamaño de estos
+  	contenedores
+  */
+}
+.section_footer .container_footer .footer_flags .espanish_flag, .section_footer .container_footer .footer_flags .english_flag {
+  width: 35px;
+  height: 25px;
+  margin: 0 8px;
+  cursor: pointer;
+  /*
+  	tag-img: la propiedad vertical-align: top remueve
+  	un espaciado que genera el navegador en las imagenes
+  	es importante que el width y height sea igaul al
+  	de su contenedor padre, finalmente la propiedad
+  	object-fit: cover que permite ajustar la imagen a
+  	su contenedor padre
+  */
+}
+.section_footer .container_footer .footer_flags .espanish_flag img, .section_footer .container_footer .footer_flags .english_flag img {
+  vertical-align: top;
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section_footer .container_footer .box_gotop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: fill 0.1s ease;
+  /*
+  	@query 499px <== : medida responsive aplicada a box_gotop
+  	definimos width y height para darle tamaño a la caja
+  */
+  /*
+  	@query 500px ==> : medida responsive aplicada a box_gotop
+  	definimos width y height para redefinir el tamaño de la caja
+  */
+  /*
+  	tag-svg: si definimos width y height al contenedor 
+  	podemos manipular el tamaño del icono
+  */
+}
+@media (max-width: 499px) {
+  .section_footer .container_footer .box_gotop {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media (min-width: 500px) {
+  .section_footer .container_footer .box_gotop {
+    width: 53px;
+    height: 53px;
+  }
+}
+.section_footer .container_footer .box_gotop svg {
+  fill: #222;
+  width: 30px;
+  height: 30px;
+  transition: all 0.1s ease;
+}/*# sourceMappingURL=style.css.map */

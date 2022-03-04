@@ -1,0 +1,180 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header, main {
+  background-color: #45898b;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 260px;
+}
+
+main {
+  background-color: gold;
+}
+
+/*
+	section_footer: contenedor en el cual implementamos
+	margin o padding si deseamos separar esta seccion
+	de otra
+*/
+.section_footer {
+  background-color: #445268;
+  padding: 50px 0;
+  /*
+  	container_footer: contenedor en el cual definimos
+  	width para manejar el responsive
+  */
+}
+.section_footer .container_footer {
+  margin: 0 auto;
+  /*
+            query 769px <=== : definimos un width para esta medida
+  */
+  /*
+            query 770px ===> : definimos un width para esta medida
+  */
+  /*
+  	content_flexbox
+  */
+}
+@media (max-width: 769px) {
+  .section_footer .container_footer {
+    width: 90%;
+  }
+}
+@media (min-width: 770px) {
+  .section_footer .container_footer {
+    width: 80%;
+  }
+}
+.section_footer .container_footer .content_flexbox {
+  /*
+  	box_gotop: con relative y sus propiedades bottom
+  	y z-index para posicionar esta caja, luego hacemos
+  	uso de flexbox y sus propiedades justify-content
+  	y align-items para centrar vertical y horizontalmente
+  	el icono. finalmente hacemos uso de width y height
+  	para darle tamaño a la caja que finalizamos centramos 
+  	con la propiedad margin 
+  */
+  /*
+  	content_search
+  */
+  /*
+  	content_links
+  */
+  /*
+  	box_copy_right
+  */
+}
+.section_footer .container_footer .content_flexbox .box_gotop {
+  position: relative;
+  bottom: 80px;
+  z-index: 99;
+  display: flex;
+  width: 60px;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #445268;
+  margin: 0 auto;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  /*
+  	tag-svg: resaltemos que si le damos width y height al 
+  	contenedor podemos manipular el tamaño del icono 
+  */
+}
+.section_footer .container_footer .content_flexbox .box_gotop svg {
+  fill: #fff;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.section_footer .container_footer .content_flexbox .content_search {
+  text-align: center;
+  /*
+  	tag-h2
+  */
+  /*
+  	tag_form
+  */
+}
+.section_footer .container_footer .content_flexbox .content_search h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 1.1px;
+}
+.section_footer .container_footer .content_flexbox .content_search form {
+  margin-top: 16px;
+  /*
+  	tag_input
+  */
+  /*
+  	seleccionamos el input de tipo texto
+  */
+  /*
+  	seleccionamos el input de tipo submit
+  */
+}
+.section_footer .container_footer .content_flexbox .content_search form input {
+  outline: none;
+  border: 1px solid #fff;
+  height: 35px;
+  margin: 0 2px;
+}
+.section_footer .container_footer .content_flexbox .content_search form input[type=text] {
+  width: 220px;
+  padding: 0 8px;
+}
+.section_footer .container_footer .content_flexbox .content_search form input[type=submit] {
+  color: #333;
+  width: 120px;
+  cursor: pointer;
+  /*
+  	query 391px <=== : definimos un margen superiro 
+  	para esta medida
+  */
+}
+@media (max-width: 391px) {
+  .section_footer .container_footer .content_flexbox .content_search form input[type=submit] {
+    margin-top: 22px;
+  }
+}
+.section_footer .container_footer .content_flexbox .content_links {
+  text-align: center;
+  margin: 50px 0;
+  /*
+  	tag-p
+  */
+}
+.section_footer .container_footer .content_flexbox .content_links p {
+  color: #fff;
+  line-height: 1.6;
+  /*
+  	tag-a
+  */
+}
+.section_footer .container_footer .content_flexbox .content_links p a {
+  text-decoration: none;
+  color: #fff;
+  /*
+  	cuando hacemos :hover sobre los enlaces
+  	cambiamos su color y añadimos una linea
+  	en la parte inferior del texto
+  */
+}
+.section_footer .container_footer .content_flexbox .content_links p a:hover {
+  color: olivedrab;
+  text-decoration: underline;
+}
+.section_footer .container_footer .content_flexbox .box_copy_right {
+  text-align: center;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

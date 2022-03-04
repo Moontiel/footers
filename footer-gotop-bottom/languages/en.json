@@ -1,0 +1,44 @@
+{
+    "footerColumns": {
+        "columnOne": "People",
+        "columnTwo": "Interests",
+        "columnThree": "Banks",
+        "columnFour": "Contacts"
+    },
+
+    "itemsColumnOne": {
+        "itemOne": "Profits",
+        "itemTwo": "Send and receive money",
+        "itemThree": "bench at hand",
+        "itemFour": "Payments",
+        "itemFive": "Segments",
+        "itemSix": "Channels"
+    },
+
+    "itemsColumnTwo": {
+        "itemOne": "financial education",
+        "itemTwo": "Colombian legal information",
+        "itemThree": "Terms of use",
+        "itemFour": "Used for sale",
+        "itemFive": "Rate",
+        "itemSix": "National bank"
+    },
+
+    "itemsColumnThree": {
+        "itemOne": "Providers",
+        "itemTwo": "Work with us",
+        "itemThree": "Financial consumer, requirement and defender",
+        "itemFour": "Accessibility",
+        "itemFive": "Site map",
+        "itemSix": "Frequently Asked Questions",
+        "itemSeven": "Secure bidding processes 2021-2023"
+    },
+
+    "itemsColumnFour": {
+        "itemSix": "Another country +57 (60 1) 343 00 00"
+    },
+
+    "socialsMedia": {
+        "titleMedia": "Follow us"
+    }
+}

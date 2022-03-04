@@ -1,0 +1,365 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header,
+main {
+	text-align: center;
+	background-color: #ff671b;
+	color: #fff;
+	height: 200px;
+}
+
+main {
+	background-color: darkcyan;
+}
+
+/*
+	tag-h4: titulo que pertence a las secciones
+	de content_footer_flexbox
+*/
+h4 {
+	color: #ff671b;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+/*
+	tag-ul: menu de navegacion que pertence a 
+	las secciones de content_footer_flexbox
+*/
+ul {
+	/*
+		tag-li
+	*/
+	li {
+		list-style: none;
+		margin-top: 10px;
+
+		/*
+			tag-a
+		*/
+		a {
+			text-decoration: none;
+			color: #313338;
+			font-size: 14px;
+			line-height: 1.5;
+
+			/*
+				cuando hacemos :hover sobre los enlaces
+				cambiamos su color
+			*/
+			&:hover {
+				color: #ff671b;
+			}
+		}
+	}
+}
+
+/*
+	section_footer: contenedor en el cual implementamos
+	margin o padding si deseamos separar esta seccion
+	de otra
+*/
+.section_footer {
+	background-color: #fff;
+	padding: 50px 0;
+
+	/*
+		container_footer: contenedor en el cual definimos
+		width para manejar el responsive
+	*/
+	.container_footer {
+		margin: 0 auto;
+
+		/*
+			@query 699px <== : definimos un width en 
+			esta medida para container_footer
+		*/
+		@media (max-width: 699px) {
+			width: 92%;
+		}
+
+		/*
+			@query 700px ==> : definimos un width en 
+			esta medida para container_footer
+		*/
+		@media (min-width: 700px) {
+			width: 75%;
+		}
+
+		/*
+			@query 900px ==> : definimos un width en 
+			esta medida para container_footer
+		*/
+		@media (min-width: 900px) {
+			width: 85%;
+		}
+
+		/*
+			content_flexbox
+		*/
+		.content_flexbox {
+			/*
+				@query 900px ==> : definimos flexbox y sus propiedades
+				flex-wrap:: wrap que reubica los elementos cuando estos 
+				sobrepasan el ancho de su contenedor padre, finalmente
+				space-between: separa los elementos entre si
+			*/
+			@media (min-width: 700px) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			/*
+				content_columna_one
+			*/
+			.content_column_one {
+
+				/*
+					box_logo_footer
+				*/
+				.box_logo_footer {
+					width: 160px;
+					height: 81px;
+
+					/*
+						@query 767px <== : modificamos el width y 
+						height de box_logo_footer
+					*/
+					@media (max-width: 767px) {
+						width: 110px;
+						height: 56px;
+					}
+
+					/*
+						tag-img: vertical-align: top elimina un espaciado
+						que genera el navegador en las imagenes y 
+						object-fit: cover para ajustar las imagenes a 
+						su contenedor padre
+					*/ 
+					img {
+						vertical-align: top;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				/*
+					box_socials_media
+				*/ 
+				.box_socials_media {
+					margin-top: 20px;
+
+					/*
+						tag-h4
+					*/ 
+					h4 {
+						color: #313338;
+					}
+
+					/*
+						tag-a
+					*/ 
+					a {
+						text-decoration: none;
+
+						/*
+							tag-svg
+						*/ 
+						svg {
+							width: 32px;
+							height: 32px;
+							fill: #878787;
+							margin: 5px 10px 0 -10px;
+
+							/*
+								cuando hacemos :hover sobre los iconos
+								cambiamos el color de los mismos
+							*/ 
+							&:hover {
+								fill: #ff671b;
+							}
+						}
+					}
+				}
+			}
+
+			/*
+				content_columna_two
+			*/
+			.content_column_two {
+				/*
+					@query 699px <== : definimos un margen en la 
+					parte superior para esta medida
+				*/
+				@media (max-width: 699px) {
+					margin-top: 20px;
+				}
+			}
+
+			/*
+				content_columna_three
+			*/
+			.content_column_three {
+				/*
+					@query 956px <== : definimos un margen en la 
+					parte superior para esta medida
+				*/
+				@media (max-width: 956px) {
+					margin-top: 20px;
+				}
+
+				/*
+					box_info_three
+				*/
+				.box_info_three {
+					/*
+						seleccionamos la segunda caja con clase
+						box_info_three y le definimos un margin-top
+                    */
+					&:nth-child(2) {
+						margin-top: 20px;
+					}
+				}
+			}
+
+			/*
+				content_columna_four
+			*/
+			.content_column_four {
+				/*
+					@query 956px <== : definimos un margen en la 
+					parte superior para esta medida
+				*/
+				@media (max-width: 956px) {
+					margin-top: 20px;
+				}
+
+				/*
+					box_info_four
+				*/
+				.box_info_four {
+					/*
+						seleccionamos la segunda caja con clase
+						box_info_four y le definimos un margin
+                    */
+					&:nth-child(2) {
+						margin: 20px 0;
+					}
+
+					/*
+						tag-p
+					*/
+					p {
+						font-size: 14px;
+						line-height: 1.4;
+						padding-top: 6px;
+					}
+				}
+			}
+		}
+
+		/*
+			box_gotop: implementamos fixed y sus propiedades right, 
+			y z-index para darle posicion a esta caja, luego
+			hacemos uso de flexbox y sus propiedades justify-content
+			y align-items para centrar vertical y horizontalmente
+			el icono, finalmente overflow: hidden para ocualtar 
+			esta caja
+		*/
+		.box_gotop {
+			position: fixed;
+			right: 25px;
+			z-index: 99;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.1s ease;
+
+			/*
+				añadimos la clase javascript js_show_gotop que añade 
+				background-color un borde y overflow: visible para 
+				visible nuevamente esta caja 
+			*/
+			&.js_show_gotop {
+				background-color: #fff;
+				border: 1px solid #8c8c8c;
+				overflow: visible;
+
+				&:hover {
+					background-color: #ff671b;
+					border: none;
+				}
+
+				/*
+					cuando hacemos :hover sobre box_gotop
+					relacionamos a tag-svg para añadirle color
+					al icono
+				*/
+				&:hover svg {
+					fill: #fff;
+				}
+			}
+
+			/*
+				añadimos la clase javascript js_show_gotop que relaciona 
+				a la tag-svg para añadirle color al icono
+			*/
+			&.js_show_gotop svg {
+				fill: #77777a;
+			}
+
+			/*
+				@query 499px <== : medida responsive aplicada a box_gotop
+				definimos width y height para darle tamaño a la caja
+				y bottom para posicionarla
+			*/
+			@media (max-width: 499px) {
+				width: 43px;
+				height: 43px;
+				bottom: 120px;
+			}
+
+			/*
+				@query 500px ==> : medida responsive aplicada a box_gotop
+				definimos width y height para redefinir el tamaño de la caja
+				y bottom para posicionarla
+			*/
+			@media (min-width: 500px) {
+				width: 73px;
+				height: 73px;
+				bottom: 207px;
+			}
+
+			/*
+				tag-svg: importante definir fill: transparent 
+				para ocultar el icono, tambien si le damos width 
+				y height al contenedor podemos manipular el tamaño 
+				del icono
+			*/
+			svg {
+				fill: transparent;
+				width: 39px;
+				height: 39px;
+				transition: all 0.1s ease;
+			}
+		}
+
+		/*
+			box_copy_right
+		*/
+		.box_copy_right {
+			text-align: center;
+			color: #77777a;
+			font-size: 14px;
+			padding-top: 60px;
+		}
+	}
+}
